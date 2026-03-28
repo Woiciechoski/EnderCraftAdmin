@@ -9,9 +9,6 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <!-- Chosen Palette: Slate (Backgrounds), Red (Alerts/Guilty), Violet (Nox), Emerald (Blk), Amber (HWL) -->
     <!-- Application Structure Plan: The SPA is structured as a "Moderation Dashboard" with a tabbed navigation system (Visão Geral, Análise de Provas, Veredito). This structure was chosen to break down the dense investigation report into digestible, task-oriented views. The 'Visão Geral' provides context; the 'Análise de Provas' uses interactive step-by-step logic and data visualization to prove the guilt, engaging the user in the investigator's logic; and 'Veredito' clearly lists the consequences. -->
     <!-- Visualization & Content Choices: 
@@ -23,23 +20,6 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <style>
-        /* Requisito Crítico: Estilização do Container de Gráficos */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-
         /* Utilitários para a Reconstrução Tática */
         .arena-grid {
             background-color: #e2e8f0;
@@ -283,19 +263,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Gráfico de Anomalia de Combate -->
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex-grow">
-                        <h3 class="font-bold text-slate-800 mb-2">Evidência 03: Anomalia de Combate (Logs)</h3>
-                        <p class="text-sm text-slate-600 mb-4">
-                            Gráfico ilustrativo baseado nos logs do Gladiador, demonstrando a distribuição de dano. A
-                            completa ausência de agressão entre Nox e Blk reforça o conluio.
-                        </p>
-                        <!-- REQUIRED CHART CONTAINER -->
-                        <div class="chart-container">
-                            <canvas id="combatChart"></canvas>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -468,11 +435,6 @@
             const activeBtn = document.getElementById(`tab-${tabId}`);
             activeBtn.classList.remove('border-transparent', 'text-slate-500');
             activeBtn.classList.add('border-slate-900', 'text-slate-900');
-
-            // Render Chart if navigating to Provas (delay slightly for DOM rendering)
-            if (tabId === 'provas') {
-                setTimeout(renderChart, 100);
-            }
         }
 
 
@@ -582,69 +544,6 @@
                 AppState.currentScene = newScene;
                 updateSceneUI();
             }
-        }
-
-
-        // --- CHART.JS INITIALIZATION ---
-        let combatChartInstance = null;
-
-        function renderChart() {
-            const ctx = document.getElementById('combatChart');
-
-            // Prevent re-rendering multiple times if tab clicked repeatedly
-            if (combatChartInstance) return;
-
-            combatChartInstance = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'NOX atacando HWL',
-                        'BLK atacando HWL',
-                        ['NOX atacando BLK', '(Anomalia / Ally)'] // Multi-line label (16-char logic implied by array wrapping)
-                    ],
-                    datasets: [{
-                        label: 'Volume de Dano/Hits Registrado',
-                        data: [120, 85, 0], // The "0" is the crucial proof
-                        backgroundColor: [
-                            '#8b5cf6', // Nox violet
-                            '#10b981', // Blk emerald
-                            '#ef4444'  // Red for the anomaly
-                        ],
-                        borderWidth: 1,
-                        borderColor: '#e2e8f0',
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false, // MANDATORY for chart container sizing
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function (context) {
-                                    if (context.raw === 0) return ' ZERO hits registrados. Dano suprimido.';
-                                    return ` ${context.raw} hits registrados`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: { display: true, text: 'Qtd. Estimada de Hits' },
-                            grid: { color: '#f1f5f9' }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: {
-                                maxRotation: 0,
-                                autoSkip: false
-                            }
-                        }
-                    }
-                }
-            });
         }
 
         // --- INIT ---
