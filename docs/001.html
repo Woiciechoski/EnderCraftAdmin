@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Investigação - EnderCraft</title>
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -26,13 +25,11 @@
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
             background-size: 20px 20px;
         }
-
         .player-node {
             transition: all 0.5s ease-in-out;
         }
     </style>
 </head>
-
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
 
     <!-- Header -->
@@ -46,7 +43,7 @@
                 <div class="flex items-center gap-3 bg-slate-800 p-3 rounded-lg border border-slate-700">
                     <div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
                     <div>
-                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Status</p>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Status do Inquérito</p>
                         <p class="text-sm font-bold text-red-400">ENCERRADO / CONCLUÍDO</p>
                     </div>
                 </div>
@@ -59,20 +56,17 @@
         <div class="max-w-6xl mx-auto px-4">
             <ul class="flex overflow-x-auto gap-1">
                 <li>
-                    <button onclick="switchTab('resumo')" id="tab-resumo"
-                        class="nav-btn active px-4 py-4 text-sm font-medium border-b-2 border-slate-900 text-slate-900 whitespace-nowrap">
+                    <button onclick="switchTab('resumo')" id="tab-resumo" class="nav-btn active px-4 py-4 text-sm font-medium border-b-2 border-slate-900 text-slate-900 whitespace-nowrap">
                         📄 Visão Geral do Caso
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('provas')" id="tab-provas"
-                        class="nav-btn px-4 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 whitespace-nowrap">
+                    <button onclick="switchTab('provas')" id="tab-provas" class="nav-btn px-4 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 whitespace-nowrap">
                         🔎 Análise de Provas
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('veredito')" id="tab-veredito"
-                        class="nav-btn px-4 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 whitespace-nowrap">
+                    <button onclick="switchTab('veredito')" id="tab-veredito" class="nav-btn px-4 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 whitespace-nowrap">
                         ⚖️ Veredito & Punições
                     </button>
                 </li>
@@ -88,10 +82,7 @@
             <div class="mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 mb-3">Visão Geral da Investigação</h2>
                 <p class="text-lg text-slate-600 leading-relaxed">
-                    Esta seção apresenta os dados iniciais do inquérito aberto no dia <strong>28 de Março de
-                        2026</strong> pelo Supervisor Vox. O objetivo é fornecer o contexto de quem estava envolvido, o
-                    que foi denunciado no evento Gladiador, e quais regras fundamentais do servidor foram supostamente
-                    violadas pelos clãs investigados.
+                    Esta seção apresenta os dados iniciais do inquérito aberto no dia <strong>28 de Março de 2026</strong> pelo Supervisor Vox. O objetivo é fornecer o contexto de quem estava envolvido, o que foi denunciado no evento Gladiador, e quais regras fundamentais do servidor foram supostamente violadas pelos clãs investigados.
                 </p>
             </div>
 
@@ -102,38 +93,29 @@
                     <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Clã Investigado</div>
                     <h3 class="text-xl font-bold text-violet-700 mb-2">NOX</h3>
                     <ul class="text-sm space-y-2 mt-4">
-                        <li><span class="font-semibold text-slate-700">Flagrado em Vídeo:</span> <code
-                                class="bg-slate-100 px-1 rounded">RATOQUINHO_</code></li>
-                        <li><span class="font-semibold text-slate-700">Conta Irregular:</span> <code
-                                class="bg-slate-100 px-1 rounded">Marquinhostxt_</code></li>
+                        <li><span class="font-semibold text-slate-700">Flagrado em Vídeo:</span> <code class="bg-slate-100 px-1 rounded">RATOQUINHO_</code></li>
+                        <li><span class="font-semibold text-slate-700">Conta Irregular:</span> <code class="bg-slate-100 px-1 rounded">Marquinhostxt_</code></li>
                         <li><span class="font-semibold text-slate-700">Participantes:</span> 12 membros</li>
                     </ul>
                 </div>
 
                 <!-- Investigated Clan B -->
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 border-t-4 border-t-emerald-500">
-                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Clã Investigado /
-                        Cúmplice</div>
-                    <h3 class="text-xl font-bold text-emerald-700 mb-2">BLK <span
-                            class="text-sm text-slate-400 font-normal">(Atual VXZ)</span></h3>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Clã Investigado / Cúmplice</div>
+                    <h3 class="text-xl font-bold text-emerald-700 mb-2">BLK <span class="text-sm text-slate-400 font-normal">(Atual VXZ)</span></h3>
                     <ul class="text-sm space-y-2 mt-4">
-                        <li><span class="font-semibold text-slate-700">Flagrado em Vídeo:</span> <code
-                                class="bg-slate-100 px-1 rounded">Suitwryl</code></li>
-                        <li><span class="font-semibold text-slate-700">Conta Fake (Nox):</span> <code
-                                class="bg-slate-100 px-1 rounded">Marquinhostxt</code></li>
+                        <li><span class="font-semibold text-slate-700">Flagrado em Vídeo:</span> <code class="bg-slate-100 px-1 rounded">Suitwryl</code></li>
+                        <li><span class="font-semibold text-slate-700">Conta Fake (Nox):</span> <code class="bg-slate-100 px-1 rounded">Marquinhostxt</code></li>
                         <li><span class="font-semibold text-slate-700">Participantes:</span> 3 membros</li>
                     </ul>
                 </div>
 
                 <!-- Victim Clan -->
-                <div
-                    class="bg-slate-100 rounded-xl shadow-inner border border-slate-200 p-6 border-t-4 border-t-amber-500 opacity-90">
-                    <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Clã Prejudicado (Vítima)
-                    </div>
+                <div class="bg-slate-100 rounded-xl shadow-inner border border-slate-200 p-6 border-t-4 border-t-amber-500 opacity-90">
+                    <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Clã Prejudicado (Vítima)</div>
                     <h3 class="text-xl font-bold text-amber-700 mb-2">HWL</h3>
                     <p class="text-sm text-slate-600 mt-2">
-                        O jogador <code class="bg-slate-200 px-1 rounded">Vwyk</code> estava atacando um alvo
-                        vulnerável, quando foi interceptado de forma coordenada e ilegal pelos clãs Nox e Blk.
+                        O jogador <code class="bg-slate-200 px-1 rounded">Vwyk</code> estava atacando um alvo vulnerável, quando foi interceptado de forma coordenada e ilegal pelos clãs Nox e Blk.
                     </p>
                 </div>
             </div>
@@ -141,24 +123,16 @@
             <!-- Relato & Regras -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-2">O Relato do Incidente (Gladiador)
-                    </h3>
-                    <p class="text-slate-600 mb-4">Durante a arena do Gladiador (26/03), <strong>Suitwryl (Blk)</strong>
-                        estava preso em uma teia, com pouquíssima armadura, sob ataque de <strong>Vwyk (HWL)</strong>.
-                        Era um alvo extremamente fácil de ser eliminado.</p>
-                    <p class="text-slate-600">Logo em seguida, <strong>RATOQUINHO_ (Nox)</strong> chega na luta. Em vez
-                        de aproveitar a oportunidade para eliminar o jogador da Blk (ação esperada em um evento
-                        competitivo FFA), ele ignora totalmente o jogador preso e foca seus ataques apenas no membro da
-                        HWL.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-2">O Relato do Incidente (Gladiador)</h3>
+                    <p class="text-slate-600 mb-4">Durante a arena do Gladiador (26/03), <strong>Suitwryl (Blk)</strong> estava preso em uma teia, com pouquíssima armadura, sob ataque de <strong>Vwyk (HWL)</strong>. Era um alvo extremamente fácil de ser eliminado.</p>
+                    <p class="text-slate-600">Logo em seguida, <strong>RATOQUINHO_ (Nox)</strong> chega na luta. Em vez de aproveitar a oportunidade para eliminar o jogador da Blk (ação esperada em um evento competitivo FFA), ele ignora totalmente o jogador preso e foca seus ataques apenas no membro da HWL.</p>
                     <div class="mt-4 p-4 bg-red-50 text-red-800 rounded-lg text-sm border border-red-100">
-                        <strong>A Suspeita Central:</strong> Proteção intencional mútua (Ally) e quebra da integridade
-                        competitiva.
+                        <strong>A Suspeita Central:</strong> Proteção intencional mútua (Ally) e quebra da integridade competitiva.
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-2">Regras Quebradas (Diretrizes
-                        Oficiais)</h3>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-2">Regras Quebradas (Diretrizes Oficiais)</h3>
                     <p class="text-sm text-slate-500 mb-4">Clique nos itens para ler a descrição oficial da regra.</p>
                     <div class="space-y-2" id="rules-accordion">
                         <!-- Gerado via JS -->
@@ -172,10 +146,7 @@
             <div class="mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 mb-3">Análise das Provas Materiais</h2>
                 <p class="text-lg text-slate-600 leading-relaxed">
-                    A moderação do EnderCraft exige <strong>provas fortes</strong> para punições de aliança. Nesta
-                    seção, você pode explorar as evidências irrefutáveis que embasaram o veredito: a reconstrução tática
-                    do vídeo da denúncia e os dados dos logs do servidor provando o vínculo estrutural ilícito (contas
-                    fakes cruzadas).
+                    A moderação do EnderCraft exige <strong>provas fortes</strong> para punições de aliança. Nesta seção, você pode explorar as evidências irrefutáveis que embasaram o veredito: a reconstrução tática do vídeo da denúncia e os dados dos logs do servidor provando o vínculo estrutural ilícito (contas fakes cruzadas).
                 </p>
             </div>
 
@@ -183,54 +154,59 @@
                 <!-- Reconstrução do Vídeo -->
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
                     <div class="p-4 bg-slate-100 border-b border-slate-200 flex justify-between items-center">
-                        <h3 class="font-bold text-slate-800">Evidência 01: Reconstrução Tática em Vídeo</h3>
-                        <span class="text-xs bg-slate-800 text-white px-2 py-1 rounded">Cena Interativa</span>
+                        <h3 class="font-bold text-slate-800">Evidência 01: Gravação Oficial do Incidente</h3>
+                        <span class="text-xs bg-red-600 text-white px-2 py-1 rounded font-bold">Vídeo Principal</span>
                     </div>
-
+                    
                     <div class="p-6 flex-grow">
+                        <!-- Renderização Nativa do Vídeo (Sem marca d'água/áudio) -->
+                        <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-slate-300 shadow-inner mb-6 bg-slate-900 flex items-center justify-center group">
+                            
+                            <!-- 
+                                IMPORTANTE: Substitua o 'src' abaixo pelo link direto do arquivo .mp4.
+                                A tag 'video' com 'muted', 'autoplay' e sem 'controls' garante que o vídeo rode silencioso e limpo.
+                            -->
+                            <video id="evidencia-video" class="w-full h-full object-contain" autoplay loop muted playsinline>
+                                <source src="https://cdn.discordapp.com/attachments/1197046163069751361/1487537808104230993/YOrG9FDvrxxLMG2ZzDDAzw.mp4?ex=69c9810a&is=69c82f8a&hm=38ff182debf6b6cc9a156838fc599c16652c4ad9ac4cf87398160a9f324df084&" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                            
+                            <!-- Placeholder informativo (Pode ser apagado após colocar o link .mp4 válido) -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 text-center p-6 border-2 border-dashed border-slate-600" id="video-placeholder">
+                                <span class="text-4xl mb-3">🎬</span>
+                                <h4 class="text-white font-bold mb-2 text-lg">Player Nativo Configurado</h4>
+                                <p class="text-sm text-slate-400 max-w-md">Para rodar o vídeo limpo (sem áudio e sem logos), faça o download do vídeo da Medal.tv, coloque no Discord (ou no seu site) e cole o link terminado em <code>.mp4</code> no código-fonte.</p>
+                            </div>
+
+                        </div>
+
+                        <h4 class="font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Reconstrução Tática (Frame a Frame)</h4>
                         <p class="text-sm text-slate-600 mb-4 h-16" id="scene-description">
                             Carregando análise...
                         </p>
-
+                        
                         <!-- Mini Arena Visual -->
-                        <div
-                            class="arena-grid w-full h-64 rounded-lg relative overflow-hidden border border-slate-300 shadow-inner mb-6">
+                        <div class="arena-grid w-full h-64 rounded-lg relative overflow-hidden border border-slate-300 shadow-inner mb-6">
                             <!-- HWL Player -->
-                            <div id="p-hwl"
-                                class="player-node absolute w-6 h-6 bg-amber-500 rounded border-2 border-amber-700 flex items-center justify-center text-[10px] text-white font-bold"
-                                style="top: 50%; left: 30%;">H</div>
+                            <div id="p-hwl" class="player-node absolute w-6 h-6 bg-amber-500 rounded border-2 border-amber-700 flex items-center justify-center text-[10px] text-white font-bold" style="top: 50%; left: 30%;">H</div>
                             <!-- Blk Player -->
-                            <div id="p-blk"
-                                class="player-node absolute w-6 h-6 bg-emerald-500 rounded border-2 border-emerald-700 flex items-center justify-center text-[10px] text-white font-bold"
-                                style="top: 50%; left: 45%;">B</div>
+                            <div id="p-blk" class="player-node absolute w-6 h-6 bg-emerald-500 rounded border-2 border-emerald-700 flex items-center justify-center text-[10px] text-white font-bold" style="top: 50%; left: 45%;">B</div>
                             <!-- Nox Player -->
-                            <div id="p-nox"
-                                class="player-node absolute w-6 h-6 bg-violet-500 rounded border-2 border-violet-700 flex items-center justify-center text-[10px] text-white font-bold"
-                                style="top: 20%; left: 70%;">N</div>
-
+                            <div id="p-nox" class="player-node absolute w-6 h-6 bg-violet-500 rounded border-2 border-violet-700 flex items-center justify-center text-[10px] text-white font-bold" style="top: 20%; left: 70%;">N</div>
+                            
                             <!-- Cobweb representation -->
-                            <div id="cobweb"
-                                class="absolute w-10 h-10 border border-slate-400 rounded-full flex items-center justify-center opacity-50"
-                                style="top: calc(50% - 8px); left: calc(45% - 8px);">
+                            <div id="cobweb" class="absolute w-10 h-10 border border-slate-400 rounded-full flex items-center justify-center opacity-50" style="top: calc(50% - 8px); left: calc(45% - 8px);">
                                 <span class="text-2xl text-slate-500">🕸️</span>
                             </div>
                             <!-- Attack Indicator -->
-                            <div id="attack-line"
-                                class="absolute h-1 bg-red-500 origin-left scale-x-0 transition-transform duration-300 hidden">
-                            </div>
+                            <div id="attack-line" class="absolute h-1 bg-red-500 origin-left scale-x-0 transition-transform duration-300 hidden"></div>
                         </div>
 
                         <!-- Controls -->
-                        <div
-                            class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
-                            <button onclick="changeScene(-1)"
-                                class="px-4 py-2 bg-white border border-slate-300 rounded hover:bg-slate-100 text-sm font-medium transition-colors">◄
-                                Anterior</button>
-                            <div class="text-sm font-bold text-slate-700">Frame <span id="frame-counter">1</span> de 3
-                            </div>
-                            <button onclick="changeScene(1)"
-                                class="px-4 py-2 bg-slate-800 text-white rounded hover:bg-slate-700 text-sm font-medium transition-colors">Próximo
-                                ►</button>
+                        <div class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+                            <button onclick="changeScene(-1)" class="px-4 py-2 bg-white border border-slate-300 rounded hover:bg-slate-100 text-sm font-medium transition-colors">◄ Anterior</button>
+                            <div class="text-sm font-bold text-slate-700">Frame <span id="frame-counter">1</span> de 3</div>
+                            <button onclick="changeScene(1)" class="px-4 py-2 bg-slate-800 text-white rounded hover:bg-slate-700 text-sm font-medium transition-colors">Próximo ►</button>
                         </div>
                     </div>
                 </div>
@@ -241,24 +217,18 @@
                     <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 border-l-4 border-l-red-500">
                         <h3 class="font-bold text-slate-800 mb-2">Evidência 02: Vínculo Estrutural (Logs IP)</h3>
                         <p class="text-sm text-slate-600 mb-4">
-                            Além da omissão no combate, os registros do servidor comprovaram que jogadores do clã Nox
-                            infiltram contas secundárias ("Fakes") no clã aliado para coordenar ações e manipular o
-                            número de participantes.
+                            Além da omissão no combate, os registros do servidor comprovaram que jogadores do clã Nox infiltram contas secundárias ("Fakes") no clã aliado para coordenar ações e manipular o número de participantes.
                         </p>
-
-                        <div
-                            class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
-                            <div
-                                class="bg-violet-100 text-violet-800 px-3 py-2 rounded-lg border border-violet-200 shadow-sm">
+                        
+                        <div class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
+                            <div class="bg-violet-100 text-violet-800 px-3 py-2 rounded-lg border border-violet-200 shadow-sm">
                                 <span class="block text-xs uppercase font-bold opacity-70">Conta Principal (Nox)</span>
                                 <span class="font-mono font-bold">Marquinhostxt_</span>
                             </div>
                             <div class="text-2xl text-slate-400 font-bold hidden sm:block">➔</div>
                             <div class="text-xl text-slate-400 font-bold sm:hidden">⬇</div>
-                            <div
-                                class="bg-emerald-100 text-emerald-800 px-3 py-2 rounded-lg border border-emerald-200 shadow-sm">
-                                <span class="block text-xs uppercase font-bold opacity-70">Conta Secundária
-                                    (Blk/VXZ)</span>
+                            <div class="bg-emerald-100 text-emerald-800 px-3 py-2 rounded-lg border border-emerald-200 shadow-sm">
+                                <span class="block text-xs uppercase font-bold opacity-70">Conta Secundária (Blk/VXZ)</span>
                                 <span class="font-mono font-bold">Marquinhostxt</span>
                             </div>
                         </div>
@@ -272,22 +242,17 @@
             <div class="mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 mb-3">Conclusão e Punições Aplicadas</h2>
                 <p class="text-lg text-slate-600 leading-relaxed">
-                    Com base nas evidências materiais coletadas (Vídeo e Logs do Servidor), o cenário de Aliança Ilegal
-                    e quebra de integridade do evento foi totalmente comprovado. Abaixo estão detalhadas as sanções
-                    aplicadas pela coordenação de moderação.
+                    Com base nas evidências materiais coletadas (Vídeo e Logs do Servidor), o cenário de Aliança Ilegal e quebra de integridade do evento foi totalmente comprovado. Abaixo estão detalhadas as sanções aplicadas pela coordenação de moderação.
                 </p>
             </div>
 
             <!-- Veredito Final Banner -->
             <div class="bg-red-600 text-white rounded-xl shadow-lg p-8 mb-8 text-center relative overflow-hidden">
-                <div
-                    class="absolute inset-0 opacity-10 text-[150px] font-black tracking-tighter uppercase select-none leading-none -translate-y-8">
-                    CULPADOS</div>
+                <div class="absolute inset-0 opacity-10 text-[150px] font-black tracking-tighter uppercase select-none leading-none -translate-y-8">CULPADOS</div>
                 <div class="relative z-10">
                     <h2 class="text-4xl font-black uppercase tracking-widest mb-2 shadow-sm">Veredito: Culpados</h2>
                     <p class="text-red-100 text-lg max-w-2xl mx-auto">
-                        O conluio entre as tags Nox e Blk (VXZ) está plenamente provado. Dispensa-se a necessidade de
-                        defesa, dada a clareza inquestionável das infrações de Ally e uso de contas fakes.
+                        O conluio entre as tags Nox e Blk (VXZ) está plenamente provado. Dispensa-se a necessidade de defesa, dada a clareza inquestionável das infrações de Ally e uso de contas fakes.
                     </p>
                 </div>
             </div>
@@ -305,13 +270,11 @@
                             <span class="text-xl">⛔</span>
                             <div>
                                 <h4 class="font-bold text-slate-800">Suspensão de 15 Dias</h4>
-                                <p class="text-sm text-slate-600">Banimento total de participação em Eventos
-                                    Competitivos para o clã e membros envolvidos.</p>
+                                <p class="text-sm text-slate-600">Banimento total de participação em Eventos Competitivos para o clã e membros envolvidos.</p>
                             </div>
                         </div>
                         <div class="mt-4 pt-4 border-t border-slate-100">
-                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Jogadores
-                                Suspensos (12)</h4>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Jogadores Suspensos (12)</h4>
                             <div class="flex flex-wrap gap-2" id="nox-roster">
                                 <!-- Gerado via JS -->
                             </div>
@@ -330,22 +293,18 @@
                             <span class="text-xl">⛔</span>
                             <div>
                                 <h4 class="font-bold text-slate-800">Suspensão de 15 Dias</h4>
-                                <p class="text-sm text-slate-600">Banimento total de participação em Eventos
-                                    Competitivos para o clã e membros envolvidos.</p>
+                                <p class="text-sm text-slate-600">Banimento total de participação em Eventos Competitivos para o clã e membros envolvidos.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3 mb-4">
                             <span class="text-xl">🔨</span>
                             <div>
                                 <h4 class="font-bold text-slate-800">Banimento de Conta</h4>
-                                <p class="text-sm text-slate-600">A conta <code
-                                        class="bg-slate-100 px-1 text-xs">Marquinhostxt</code> foi banida por quebra da
-                                    regra de Contas Alternativas.</p>
+                                <p class="text-sm text-slate-600">A conta <code class="bg-slate-100 px-1 text-xs">Marquinhostxt</code> foi banida por quebra da regra de Contas Alternativas.</p>
                             </div>
                         </div>
                         <div class="mt-4 pt-4 border-t border-slate-100">
-                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Jogadores
-                                Suspensos (3)</h4>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Jogadores Suspensos (3)</h4>
                             <div class="flex flex-wrap gap-2" id="blk-roster">
                                 <!-- Gerado via JS -->
                             </div>
@@ -353,7 +312,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="text-center text-sm text-slate-400 mt-12 pb-8">
                 <p>Assinado: Vox, Supervisor e Coordenador de Moderação - Equipe EnderCraft</p>
                 <p>Documento gerado em 28 de Março de 2026.</p>
@@ -431,7 +390,7 @@
             // Show target section & highlight nav
             document.getElementById(`sec-${tabId}`).classList.remove('hidden');
             document.getElementById(`sec-${tabId}`).classList.add('block');
-
+            
             const activeBtn = document.getElementById(`tab-${tabId}`);
             activeBtn.classList.remove('border-transparent', 'text-slate-500');
             activeBtn.classList.add('border-slate-900', 'text-slate-900');
@@ -439,7 +398,7 @@
 
 
         // --- DYNAMIC CONTENT RENDERING ---
-
+        
         // Render Rules Accordion
         function renderRules() {
             const container = document.getElementById('rules-accordion');
@@ -478,7 +437,7 @@
         function renderRosters() {
             const renderBadges = (arr, containerId) => {
                 const container = document.getElementById(containerId);
-                container.innerHTML = arr.map(nick =>
+                container.innerHTML = arr.map(nick => 
                     `<span class="inline-block bg-slate-100 text-slate-700 border border-slate-200 text-xs font-mono px-2 py-1 rounded shadow-sm">${nick}</span>`
                 ).join('');
             };
@@ -489,7 +448,7 @@
         // --- INTERACTIVE SCENE RECONSTRUCTOR ---
         function updateSceneUI() {
             const data = SceneData[AppState.currentScene - 1];
-
+            
             // Text
             document.getElementById('frame-counter').innerText = data.frame;
             document.getElementById('scene-description').innerHTML = data.desc;
@@ -498,7 +457,7 @@
             const pHwl = document.getElementById('p-hwl');
             const pBlk = document.getElementById('p-blk');
             const pNox = document.getElementById('p-nox');
-
+            
             pHwl.style.top = data.posHwl.top; pHwl.style.left = data.posHwl.left;
             pBlk.style.top = data.posBlk.top; pBlk.style.left = data.posBlk.left;
             pNox.style.top = data.posNox.top; pNox.style.left = data.posNox.left;
@@ -507,27 +466,27 @@
             const attackLine = document.getElementById('attack-line');
             if (data.attack.show) {
                 attackLine.classList.remove('hidden');
-
+                
                 // Calculate position and angle using basic geometry based on % relative to the container
                 // For a robust SPA without SVG, we use positioned divs
                 let startEl, endEl;
-                if (data.attack.from === 'hwl' && data.attack.to === 'blk') {
+                if(data.attack.from === 'hwl' && data.attack.to === 'blk') {
                     startEl = pHwl; endEl = pBlk;
                 } else if (data.attack.from === 'nox' && data.attack.to === 'hwl') {
                     startEl = pNox; endEl = pHwl;
                 }
-
-                if (startEl && endEl) {
+                
+                if(startEl && endEl) {
                     // Very simple visual approximation for the fixed positions above
                     attackLine.style.top = `calc(${startEl.style.top} + 12px)`;
                     attackLine.style.left = `calc(${startEl.style.left} + 12px)`;
-
-                    if (data.frame === 1 || data.frame === 2) {
+                    
+                    if(data.frame === 1 || data.frame === 2) {
                         attackLine.style.width = '15%'; // Approx dist HWL to BLK
                         attackLine.style.transform = 'rotate(0deg)';
                     } else if (data.frame === 3) {
-                        attackLine.style.width = '8%'; // Approx dist NOX to HWL
-                        attackLine.style.transform = 'rotate(-180deg)';
+                         attackLine.style.width = '8%'; // Approx dist NOX to HWL
+                         attackLine.style.transform = 'rotate(-180deg)';
                     }
                 }
             } else {
@@ -539,19 +498,25 @@
             let newScene = AppState.currentScene + direction;
             if (newScene < 1) newScene = 1;
             if (newScene > SceneData.length) newScene = SceneData.length;
-
+            
             if (newScene !== AppState.currentScene) {
                 AppState.currentScene = newScene;
                 updateSceneUI();
             }
         }
 
+        // Esconder o placeholder quando o vídeo carregar com sucesso (Opcional)
+        document.getElementById('evidencia-video').addEventListener('loadeddata', function() {
+            const placeholder = document.getElementById('video-placeholder');
+            if(placeholder) placeholder.style.display = 'none';
+        });
+
         // --- INIT ---
         window.onload = () => {
             renderRules();
             renderRosters();
             updateSceneUI();
-
+            
             // Add simple fade-in animation style dynamically
             const style = document.createElement('style');
             style.textContent = `
@@ -562,5 +527,4 @@
         };
     </script>
 </body>
-
 </html>
